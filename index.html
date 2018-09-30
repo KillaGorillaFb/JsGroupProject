@@ -6,6 +6,7 @@
         <title>
             Cheech’s Pizza
         </title>
+        <script src="scripts.js"></script>
 
 
 
@@ -13,21 +14,32 @@
 
     <body>
 
-        <form action="/action_page.php">
-            First name: <input type="text" name="fname"><br>
-            Last name: <input type="text" name="lname"><br>  
-            Number: <input type="text" name="number"><br>             
-            <input type="submit" value="Submit">
-        </form>
+        <div>
 
-        <select>
-                <option value="Cheese">Cheese</option>
-                <option value="Sasuage">Sasuage</option>
-                <option value="Pepperoni">Pepperoni</option>
-                <option value="Supreme">Supreme</option>
-                <option value="Meat Lovers">Meat Lovers</option>
-        </select>
+            <form action="/action_page.php">
+            <label for ="name">Full Name</label>
+            <input type="text" id="name" name="fullname" placeholder="Your name...">
+
+            <label for="phone">Phone</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number...">
+            
+            
+            <label for="list">Type</label>
+            <select id="list" name = "list"></select>
+
+            <label for="numList"> number of pizzas</label>
+            <select id ="numList" name ="numList"></select>
+            
+            
+            <input type="submit" value="Submit">
+
+
+            
+            </form>
+        </div>
+
         
+
         
     </body>
 </HTML>
