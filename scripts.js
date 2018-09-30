@@ -1,25 +1,38 @@
-//Pizza Types List
+var myobject = {
+    ValueA: 'Cheese',
+    ValueB: 'Sausage',
+    ValueC: 'Pepperoni',
+    ValueD: 'Supreme',
+    ValueE: 'Meat Lover',
+};//User can add new Key:Value Pair here to update Pizza Types
 
-    var number = ["Cheese", "Sausage", "Pepperoni", "Supreme", "Meat Lover"];
-    var id = document.querySelector("#list");
-    number.forEach((i) => {
-        var newDiv = document.createElement('div')
-        newDiv.innerHTML = i
-        id.appendChild(newDiv)
-    })
-
-
-//Number of Pizzas List
-    var number = [1,2,3,4,5,6,7,8,9,10];
-    var id = document.querySelector("#numList");
-    number.forEach((i) => {
-        var newDiv = document.createElement('div')
-        newDiv.innerHTML = i
-        id.appendChild(newDiv)
-    })
+var select = document.getElementById("pizzaType");
+for (index in myobject) {
+    select.options[select.options.length] = new Option(myobject[index], index);
+}
 
 
-//Order Calculation For Submit Button
+var myobject = {
+    ValueA: '1',
+    ValueB: '2',
+    ValueC: '3',
+    ValueD: '4',
+    ValueE: '5',
+    ValueF: '6',
+    ValueG: '7',
+    ValueH: '8',
+    ValueI: '9',
+    ValueJ: '10'
+};//User can add new Key:Value Pair here to update Pizza Amount
+
+
+var select = document.getElementById("numPizzas");
+for (index in myobject) {
+    select.options[select.options.length] = new Option(myobject[index], index);
+}
+
+
+//Order Calculation For Submit Button -- Still need to finish
 numPizza = document.getElementById("numList").innerHTML;
 pizzaPrice = 10;
 taxRate = .076;
