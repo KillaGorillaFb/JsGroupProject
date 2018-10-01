@@ -1,45 +1,47 @@
-<!DOCTYPE HTML>
-<HTML>
-
-    <head>
-        <meta charset="UTF-8">
-        <title>
-            Cheech’s Pizza
-        </title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Cheech's Pizza</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+ 
+</head>
+<body>
+    <h1>Cheech's Pizza Order Page</h1>
+    <div class="container">
+        <form action="">
+    
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Your full name..">
+    
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" name="phone" placeholder="Your phone number..">
+    
+            <label for="pizzaType">Types of Pizza</label>
+            <select id="pizzaType" name="pizzaType">
+            </select>
+    
+            <label for="numPizzas">Number of Pizzas</label>
+            <select id="numPizzas" name="numPizzas">
+            </select>
+            
+            
+            <input type = "button" class="button button4" id="button"value="Order">
+        
+            <!--Style this Button-->
+            <h1 id="test"></h1>
+            <script>//Grabs innerHTML of test paragraph
+            //Need to modify to grab inner of form or to submit to another page and then run function at new page upon clicking button
+            document.getElementById("button").addEventListener("click", function () {
+                    document.getElementById("test").innerHTML = 'Hello World';
+                    
+                });
+            </script>
+        </form>
+    </div>
         <script src="scripts.js"></script>
 
-
-
-    </head>
-
-    <body>
-
-        <div>
-
-            <form action="/action_page.php">
-            <label for ="name">Full Name</label>
-            <input type="text" id="name" name="fullname" placeholder="Your name...">
-
-            <label for="phone">Phone</label>
-            <input type="text" id="phone" name="phone" placeholder="Your phone number...">
-            
-            
-            <label for="list">Type</label>
-            <select id="list" name = "list"></select>
-
-            <label for="numList"> number of pizzas</label>
-            <select id ="numList" name ="numList"></select>
-            
-            
-            <input type="submit" value="Submit">
-
-
-            
-            </form>
-        </div>
-
-        
-
-        
-    </body>
-</HTML>
+</body>
+</html>
