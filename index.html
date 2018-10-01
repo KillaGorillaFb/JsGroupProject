@@ -27,7 +27,14 @@
             <select id="numPizzas" name="numPizzas">
             </select>
     
-            <input type="submit" value="Submit">
+            <button id="button">Order</button><!--Style this Button-->
+            <h1 id="test"></h1>
+            <script>//Grabs innerHTML of test paragraph
+            //Need to modify to grab inner of form or to submit to another page and then run function at new page upon clicking button
+            document.getElementById("button").addEventListener("click", function () {
+                    document.getElementById("test").innerHTML = "Hello World";
+                });
+            </script>
         </form>
     </div>
         <script src="scripts.js"></script>

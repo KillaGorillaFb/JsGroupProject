@@ -6,6 +6,7 @@ var myobject = {
     ValueE: 'Meat Lover',
 };//User can add new Key:Value Pair here to update Pizza Types
 
+//Pizza Type
 var select = document.getElementById("pizzaType");
 for (index in myobject) {
     select.options[select.options.length] = new Option(myobject[index], index);
@@ -25,7 +26,7 @@ var myobject = {
     ValueJ: '10'
 };//User can add new Key:Value Pair here to update Pizza Amount
 
-
+//Number Of Pizzas
 var select = document.getElementById("numPizzas");
 for (index in myobject) {
     select.options[select.options.length] = new Option(myobject[index], index);
@@ -33,7 +34,7 @@ for (index in myobject) {
 
 
 //Order Calculation For Submit Button -- Still need to finish
-numPizza = document.getElementById("numList").innerHTML;
+numPizza = document.getElementById("numPizzas").innerHTML;
 pizzaPrice = 10;
 taxRate = .076;
 
@@ -42,3 +43,6 @@ taxes = subTotal * taxRate;
 total = taxes + subTotal;
 
 //Display Name and Phone
+document.getElementById("button").addEventListener("click", function () {
+    document.getElementById("test").innerHTML = "Hello World";
+});
