@@ -1,31 +1,76 @@
-//Pizza Types List
+var myobject = {
+  ValueA: "Cheese",
+  ValueB: "Sausage",
+  ValueC: "Pepperoni",
+  ValueD: "Supreme",
+  ValueE: "Meat Lover"
+}; //User can add new Key:Value Pair here to update Pizza Types
 
-    var number = ["Cheese", "Sausage", "Pepperoni", "Supreme", "Meat Lover"];
-    var id = document.querySelector("#list");
-    number.forEach((i) => {
-        var newDiv = document.createElement('div')
-        newDiv.innerHTML = i
-        id.appendChild(newDiv)
-    })
+//Pizza Type
+var select = document.getElementById("pizzaType");
+for (index in myobject) {
+  select.options[select.options.length] = new Option(myobject[index], index);
+}
 
+var myobject = {
+  ValueA: "1",
+  ValueB: "2",
+  ValueC: "3",
+  ValueD: "4",
+  ValueE: "5",
+  ValueF: "6",
+  ValueG: "7",
+  ValueH: "8",
+  ValueI: "9",
+  ValueJ: "10"
+}; //User can add new Key:Value Pair here to update Pizza Amount
 
-//Number of Pizzas List
-    var number = [1,2,3,4,5,6,7,8,9,10];
-    var id = document.querySelector("#numList");
-    number.forEach((i) => {
-        var newDiv = document.createElement('div')
-        newDiv.innerHTML = i
-        id.appendChild(newDiv)
-    })
+//Number Of Pizzas
+var select = document.getElementById("numPizzas");
+for (index in myobject) {
+  select.options[select.options.length] = new Option(myobject[index], index);
+}
 
+//Display Order Summary Function
+function showOrder() {
+  var name = document.getElementById("fullName");
+  var phone = document.getElementById("phone");
+  var type = document.getElementsByName("pizzaType")[0];
+  var index1 = type.selectedIndex;
+  var num = document.getElementsByName("numPizzas")[0];
+  var index = num.selectedIndex;
 
-//Order Calculation For Submit Button
-numPizza = document.getElementById("numList").innerHTML;
-pizzaPrice = 10;
-taxRate = .076;
+  //var amt1 = document.getElementsByName("numPizzas")[0];
+  //var amt2 = amt1.selectedIndex;
+  
 
-subTotal = numPizza * pizzaPrice;
-taxes = subTotal * taxRate;
-total = taxes + subTotal;
+  document.write(`Thank you for your order ${name.value}.
+     We have your contact number at ${phone.value}. We are delivering `);
+  document.write("\n");
+  document.write(num.options[index].text);
+  document.write("\n");
+  document.write(type.options[index1].text);
+  document.write(" pizza(s) to you ASAP. See you soon!");
+    //return amt2;
+}
 
-//Display Name and Phone
+//Order Calculation For Submit Button -- Still need to finish
+function calcCost() {
+  var num = document.getElementsByName("numPizzas")[0];
+  var index = num.selectedIndex;
+  //var amt = num.options[index];
+ 
+  var pizzaPrice = 10;
+  var taxRate = 0.076;
+
+  var subTotal = num * pizzaPrice;
+  var taxes = subTotal * taxRate;
+  var total = taxes + subTotal;
+    
+  document.write(num.options[index].text);
+
+  document.write(total);
+}
+
+//Event Listener
+document.getElementById("button").addEventListener("click", showOrder, calcCost);

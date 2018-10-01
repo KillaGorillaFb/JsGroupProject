@@ -45,17 +45,3 @@ input[type=submit]:hover {
     background-color: #40464d;
     padding: 20px;
 }
-
-.button {
-    background-color:black;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-}
-
-.button4 {border-radius: 12px;}
