@@ -1,7 +1,9 @@
 /* Style inputs with type="text", select elements and textareas */
-h1{
+
+h1 {
     text-align: center;
 }
+
 input[type=text], select, textarea {
     width: 100%;
     /* Full width */

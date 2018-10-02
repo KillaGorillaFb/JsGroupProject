@@ -40,17 +40,17 @@ function showOrder() {
   var num = document.getElementsByName("numPizzas")[0];
   var index = num.selectedIndex;
   var div = document.getElementById("test");
-//To avoid document.write replacing form on page and outputting to empty 
-//page using this method instead of document.write
+  //To avoid document.write replacing form on page and outputting to empty 
+  //page using this method instead of document.write
 
-//To avoid document.write replacing form on page and outputting to empty 
-//page using this method instead of document.write
+  //To avoid document.write replacing form on page and outputting to empty 
+  //page using this method instead of document.write
   div.innerHTML += `</br>Thank you for your order ${name.value}.</br>
      We have your contact number at ${phone.value}.</br> We are delivering  `;
-  div.innerHTML +=" " + num.options[index].text;
-  div.innerHTML +=" " + type.options[index1].text;
-  div.innerHTML +=" pizza(s) to you ASAP. </br>See you soon!";
- 
+  div.innerHTML += " " + num.options[index].text;
+  div.innerHTML += " " + type.options[index1].text;
+  div.innerHTML += " pizza(s) to you ASAP. </br>See you soon!";
+
 }
 
 //Order Calculation For Submit Button -- Still need to finish
@@ -61,7 +61,7 @@ function calcCost() {
   var pizzaPicker = document.getElementsByName("numPizzas")[0];
   //Converts selection to number for calculation
   var numPizzas = parseInt(pizzaPicker.options[pizzaPicker.selectedIndex].text);
-  
+
   var pizzaPrice = 10;
   var taxRate = 0.076;
 
@@ -69,13 +69,13 @@ function calcCost() {
   var taxes = subTotal * taxRate;
   var total = taxes + subTotal;
 
-  div.innerHTML +=`</br></br>Order Details:</br>Your subtotal: $ ${subTotal}.00
+  div.innerHTML += `</br></br>Order Details:</br>Your subtotal: $ ${subTotal}.00
   </br> Taxes Charged: $ ${taxes} 
   </br> Your total: $ ${total}`;
 }
 
 //Need to get both functions to run when button clicked
-function runBoth(){
+function runBoth() {
   var div = document.getElementById("test");
   div.innerHTML = " ";
   showOrder();
