@@ -52,7 +52,7 @@ function showOrder() {
   var index = num.selectedIndex;
     
   document.write("Your Subtotal is:"+ subTotal+" ");
-  document.write("\n");
+  document.write(" ");
   document.write("Your tax is: "+taxes);
 
   document.write(" Your grand total is:" + total);
@@ -61,7 +61,7 @@ function showOrder() {
   //var amt2 = amt1.selectedIndex;
   
 
-  document.write(`Thank you for your order ${name.value}.
+  document.write(` Thank you for your order ${name.value}.
      We have your contact number at ${phone.value}. We are delivering `);
   document.write("\n");
   document.write(num.options[index].text);
